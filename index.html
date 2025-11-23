@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Five o'Clock Somewhere</title>
+    <title>Is it time for a drink?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,18 +11,29 @@
       rel="stylesheet"
     />
     <style>
+      html,
       body {
+        height: 100%;
+      }
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: "Cabin", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "wdth" 100;
+        margin: 0;
+        text-align: center;
+        font-size: 2em;
       }
     </style>
     <script src="index.js"></script>
   </head>
   <body>
-    <button id="do-the-thing">Where is it 5 o'Clock?</button>
     <h1 id="text-area"></h1>
   </body>
 </html>
