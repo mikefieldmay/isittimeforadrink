@@ -1,8 +1,6 @@
 let countries = [];
 
 const init = async () => {
-  console.log(Intl.DateTimeFormat().resolvedOptions());
-
   countries = await fetch(
     "https://restcountries.com/v3.1/all?fields=name,timezones,languages,flag"
   ).then((response) => response.json());
@@ -11,15 +9,7 @@ const init = async () => {
     const currentDate = new Date();
     const hour = currentDate.getHours();
 
-    // if (hour >= 17) {
-    //   const textArea = document.getElementById("text-area");
-    //   textArea.innerText = "It's 5 o'clock here! 🍻";
-    //   return;
-    // }
-
-    console.log(countries);
     const utcOffset = currentDate.getTimezoneOffset();
-    console.log(utcOffset);
     const utcZoneNeeded = utcOffset + (17 - hour);
 
     const utcCountries = countries.filter(
